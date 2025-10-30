@@ -389,7 +389,7 @@
      FIN DE LA SECCIÓN: CLIENTES
      ======================================== -->
 <!-- ========================================
-     SECCIÓN: FORMULARIO DE CONTACTO
+     SECCIÓN: FORMULARIO DE CONTACTO (FORMSUBMIT)
      ======================================== -->
 
 <section class="page-section" id="contact">
@@ -399,61 +399,40 @@
       <h3 class="section-subheading text-muted">¿Tienes un proyecto en mente? Escríbenos.</h3>
     </div>
 
-    <!-- Formulario de contacto -->
-    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-      <div class="row align-items-stretch mb-5">
+    <!-- Formulario con Formsubmit -->
+    <form action="https://formsubmit.co/alexsanzmena@gmail.com" method="POST">
+      <!-- Opciones ocultas -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://alexsm66.github.io/web3/">
+      <input type="hidden" name="_subject" value="Nuevo mensaje desde OBRAS JOSELITO">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_autoresponse" value="Gracias por contactarnos. Te responderemos pronto.">
 
+      <div class="row align-items-stretch mb-5">
         <!-- Columna izquierda -->
         <div class="col-md-6">
-          <!-- Nombre -->
-          <div class="form-group">
-            <input class="form-control" id="name" type="text" placeholder="Tu nombre *" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="name:required">El nombre es obligatorio.</div>
+          <div class="form-group mb-3">
+            <input class="form-control" type="text" name="name" placeholder="Tu nombre *" required>
           </div>
-
-          <!-- Email -->
-          <div class="form-group">
-            <input class="form-control" id="email" type="email" placeholder="Tu correo *" data-sb-validations="required,email" />
-            <div class="invalid-feedback" data-sb-feedback="email:required">El correo es obligatorio.</div>
-            <div class="invalid-feedback" data-sb-feedback="email:email">El correo no es válido.</div>
+          <div class="form-group mb-3">
+            <input class="form-control" type="email" name="email" placeholder="Tu correo *" required>
           </div>
-
-          <!-- Teléfono -->
-          <div class="form-group mb-md-0">
-            <input class="form-control" id="phone" type="tel" placeholder="Tu teléfono *" data-sb-validations="required" />
-            <div class="invalid-feedback" data-sb-feedback="phone:required">El teléfono es obligatorio.</div>
+          <div class="form-group mb-3">
+            <input class="form-control" type="tel" name="phone" placeholder="Tu teléfono *" required>
           </div>
         </div>
 
         <!-- Columna derecha -->
         <div class="col-md-6">
-          <!-- Mensaje -->
-          <div class="form-group form-group-textarea mb-md-0">
-            <textarea class="form-control" id="message" placeholder="Tu mensaje *" data-sb-validations="required"></textarea>
-            <div class="invalid-feedback" data-sb-feedback="message:required">El mensaje es obligatorio.</div>
+          <div class="form-group form-group-textarea mb-3">
+            <textarea class="form-control" name="message" placeholder="Tu mensaje *" rows="6" required></textarea>
           </div>
         </div>
-
-      </div>
-
-      <!-- Mensaje de éxito -->
-      <div class="d-none" id="submitSuccessMessage">
-        <div class="text-center text-white mb-3">
-          <div class="fw-bolder">¡Mensaje enviado con éxito!</div>
-          Para activar este formulario, regístrate en
-          <br />
-          <a href="https://startbootstrap.com/solution/contact-forms">startbootstrap.com</a>
-        </div>
-      </div>
-
-      <!-- Mensaje de error -->
-      <div class="d-none" id="submitErrorMessage">
-        <div class="text-center text-danger mb-3">¡Error al enviar el mensaje!</div>
       </div>
 
       <!-- Botón de envío -->
       <div class="text-center">
-        <button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Enviar mensaje</button>
+        <button class="btn btn-primary btn-xl text-uppercase" type="submit">Enviar mensaje</button>
       </div>
     </form>
   </div>
@@ -462,6 +441,7 @@
 <!-- ========================================
      FIN DE LA SECCIÓN: FORMULARIO DE CONTACTO
      ======================================== -->
+
 <!-- ========================================
      SECCIÓN: PIE DE PÁGINA (FOOTER)
      ======================================== -->
